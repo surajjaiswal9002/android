@@ -1,73 +1,58 @@
-
-import './App.css';
-import Navbar  from './components/Navbar';
-import Slider from './components/Slider/Slider';
-import Footer from './components/Footer/Footer';
-import Product from './components/Product/Product';
-import Advertise from './components/Advertise.js/Advertise';
-import Home from './components/Home/Home';
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Checkout from './components/Checkout/Checkout';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Slider from "./components/Slider/Slider";
+import Footer from "./components/Footer/Footer";
+import Product from "./components/Product/Product";
+import Advertise from "./components/Advertise.js/Advertise";
+import Checkout from "./components/Cart/Cart";
+import SignIn from "./components/Account/SignIn";
+import Contact from "./components/Contact/Contact";
+import Category from "./components/Category/Category";
+import About from "./components/About/About";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignUp from "./components/Account/SignUp";
 
 function App() {
   return (
-            <Router>
-              <div className="app">
-              <Switch>
-                <Route path="/checkout">
-                  <Navbar />
-                  <Checkout />
-                </Route>
-                <Route path="/">
-                  <Navbar />
-                  <Slider />
-                  <Advertise />   
-                </Route>
-              </Switch>
+    <Router>
+      <div className="app">
+        <Navbar />
+       
+          <div>
+            <Switch>
+              <Route path="/checkout">
+                <Checkout />
+              </Route>
+              <Route path="/products/:search">
+                {" "}
+                {/* after the colon give same name  as you given in useparam */}
+                <Product />
+              </Route>
 
-              {/* <Switch>
-                <Route path="/">
-                  <Navbar />
-                  <Slider />
-                   <Advertise />   
-                </Route>
-              </Switch>
-            
-              <Switch>
-                <Route path="/products">
-                  <Product/> 
+              <Route path="/SignUp">
+                <SignUp />
+              </Route>
+              <Route path="/SignIn">
+                <SignIn />
+              </Route>
 
-                </Route>
-              </Switch>
-              <Switch>
-                <Route path="/Account">
-                  <h1>Account</h1>
-                </Route>
-              </Switch>
-              <Switch>
-                <Route path="/contact">
-                  <h1>contact</h1>
-                </Route>
-              </Switch>
-              <Switch>
-                <Route path="/About">
-                  <h1>About</h1>
-                </Route>
-              </Switch> */}
-            </div>
-            <Footer/>
-            </Router>
-           
+              <Route path="/contact">
+                <Contact />
+              </Route>
+
+              <Route path="/About">
+                <About />
+              </Route>
+              <Route path="/">
+                <Slider />
+                <Advertise />
+              </Route>
+            </Switch>
+          </div>
         
-      
-   
-      
-
-
-
-     
-   
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

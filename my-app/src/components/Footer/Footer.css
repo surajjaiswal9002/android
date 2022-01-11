@@ -1,59 +1,75 @@
 .footer {
+  background-color:black;
+  padding: 2rem 1rem;
+  line-height: 3rem;
+  margin-top: 500px;
+  min-height: 500vh;
+  color:white;
+}
 
-    background-color: rgb(26, 27, 27);
-    padding: 2rem 1rem;
-    line-height: 3rem;
-  }
-  
-  .footer-top__box span svg {
-    width: 1.6rem;
-    height: 1.6rem;
-    fill: gray;
-  }
-  
-  .footer-top__box span {
-    margin-right: 10rem;
-  }
-  
+.footer__top  {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: orange;
+}
+
+.footer-top__box :link,
+.footer-top__box :visited {
+  display: block;
+  color: white;
+  font-size: 1.4rem;
+  transition: 0.6s;
+}
+
+.footer-top__box :hover {
+  color: orange;
+}
+
+.footer-top__box div {
+  color: orange;
+  font-size: 1.4rem;
+}
+
+.footer-top__box h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color:orange;
+}
+
+
+h4 {
+  color: white;
+}
+h5{
+  color : white;
+}
+
+
+
+
+@media only screen and (max-width: 998px) {
   .footer__top {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    color: orange;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    margin-top: 250px;
   }
-  
-  .footer-top__box a:link,
-  .footer-top__box a:visited {
-    display: block;
-    color: white;
-    font-size: 1.4rem;
-    transition: 0.6s;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin-top: 250px;
   }
-  
-  .footer-top__box a:hover {
-    color: white;
+}
+
+
+@media only screen and (max-width: 411px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin-top: 250px;
+    
   }
-  
-  .footer-top__box div {
-    color: orange;
-    font-size: 1.4rem;
-  }
-  
-  .footer-top__box h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
-  
-  @media only screen and (max-width: 998px) {
-    .footer__top {
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 2rem;
-    }
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .footer__top {
-      grid-template-columns: 1fr;
-      row-gap: 2rem;
-    }
-  } 
+}

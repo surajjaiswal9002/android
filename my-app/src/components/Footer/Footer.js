@@ -1,68 +1,58 @@
-import React from 'react'
+import React from "react";
 import "./Footer.css";
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import { Link } from "react-router-dom";
 
-
-export default function Footer() {
-    return (
-        <footer id="footer" className="section footer" >
-        <div className="container">
-          <div className="footer__top">
-            <div className="footer-top__box">
-              <h3>Know About Us</h3>
-              <a href="/">About Us</a>
-              <a href="/">Privacy Policy</a>
-              <a href="/">Terms & Conditions</a>
-              <a href="/">Contact Us</a>
-              <a href="https://www.google.com/maps/">Site Map</a>
-            </div>
-            <div className="footer-top__box">
-              <h3>Connect With Us</h3>
-              <a href="https://www.facebook.com/" >  <FacebookIcon/> Facebook</a>
-              <a href="https://www.instagram.com/"><InstagramIcon />  Instagram</a>
-              <a href="https://twitter.com/">< TwitterIcon /> Twitter</a>
-              <a href="https://www.linkedin.com/"><i className='bx bxl-linkedin-square' ></i> linkedin</a>
-              
-            </div>
-            <div className="footer-top__box">
-              <h3>MY ACCOUNT</h3>
-              <a href="/">My Account</a>
-              <a href="/">Order History</a>
-              <a href="#">Wish List</a>
-              <a href="#">Newsletter</a>
-              <a href="#">Returns</a>
-            </div>
-            <div className="footer-top__box">
-              <h3 >CONTACT US</h3>
-              <div>
-                <i className='bx bxs-map' ></i>
-                Jharsuguda Odisha India
-              </div>
-              <div>
-                <box-icon name='mail-send'></box-icon>
-                surajjaiswal9002@gmail.com
-              </div>
-              <div>
-                <box-icon name='mobile'></box-icon>
-                +91-8457809598
-              </div>
-              <div>
-                Jharsuguda, Odisha , INDIA
-              </div>
-            </div>
+ function Footer() {
+  return (
+    <footer id="footer" className="section footer">
+      <div className="container">
+        <div className="footer__top">
+          <div className="footer-top__box"> 
+            <h3>Know About Us</h3>
+            <Link to="/About"> <h5>About Us</h5></Link>
+            <Link to="/"> <h5>Privacy Policy</h5></Link>
+            <Link to="/"> <h5>Terms & Conditions</h5></Link>
+            <Link to="/Contact"> <h5>Contact Us </h5></Link>
+            <Link to="https://www.google.com/maps">Site Map</Link>
+          </div>
+          <div className="footer-top__box">
+            <h3>Connect With Us</h3>
+            <Link to="https://www.facebook.com/">
+              <h5>Facebook </h5>
+            </Link>
+            <Link to="https://www.instagram.com/">
+             
+              <h5>Instagram </h5>
+            </Link>
+            <Link to="https://twitter.com/">
+              <h5> Twitter</h5>
+            </Link>
+            <Link to="./https://www.linkedin.com/">
+            <h5>linkedin</h5>
+            </Link>
+          </div>
+          <div className="footer-top__box">
+            <h3>MY ACCOUNT</h3>
+            <Link to="/Account"><h5>My Account</h5></Link>
+            <Link to="/"><h5>Order History</h5></Link>
+            <Link to="#"><h5>Wish List</h5></Link>
+            <Link to="#"><h5>Newsletter</h5></Link>
+            <Link to="/"><h5>Returns</h5></Link>
+          </div>
+          <div className="footer-top__box">
+            <h3>CONTACT US</h3>
+            <h4>Jharsuguda Odisha India</h4>
+            <h4>surajjaiswal9002@gmail.com </h4>
+            <h4>+91-8457809598</h4>
+            <h4>Jharsuguda, Odisha , INDIA</h4>
           </div>
         </div>
-        <div className="footer__bottom">
-          <div className="footer-bottom__box">
-    
-          </div>
-          <div className="footer-bottom__box">
-    
-          </div>
-        </div>
-        
-      </footer>
-    )
+      </div>
+      <div className="footer__bottom">
+        <div className="footer-bottom__box"></div>
+        <div className="footer-bottom__box"></div>
+      </div>
+    </footer>
+  );
 }
+export default Footer;
